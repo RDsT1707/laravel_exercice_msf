@@ -2,9 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
 use App\Models\Eleve;
 
 class EleveSeeder extends Seeder
@@ -14,4 +12,3 @@ class EleveSeeder extends Seeder
         Eleve::factory(50)->create();
     }
 }
-

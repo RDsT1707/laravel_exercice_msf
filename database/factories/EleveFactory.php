@@ -19,4 +19,3 @@ class EleveFactory extends Factory
         ];
     }
 }
-

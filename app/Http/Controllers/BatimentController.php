@@ -1,13 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Batiment;
 
-class BatimentController
+class BatimentController extends Controller
 {
-    public function index()
-    {
+    public function index(){
         $batiments = Batiment::all();
         return view('batiments.index', compact('batiments'));
     }

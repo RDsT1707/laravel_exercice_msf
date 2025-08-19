@@ -4,27 +4,19 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
-    /**
-     * Run the migrations.
-     */
+return new class extends Migration {
     public function up(): void
-{
-    Schema::create('eleves', function (Blueprint $table) {
-        $table->id();
-        $table->string('nom', 30);
-        $table->string('prenom', 30);
-        $table->integer('age');
-        $table->boolean('etat'); // vrai si demandeur d'emploi
-        $table->timestamps();
-    });
-}
+    {
+        Schema::create('eleves', function (Blueprint $table) {
+            $table->id();
+            $table->string('nom', 30);
+            $table->string('prenom', 30);
+            $table->integer('age');
+            $table->boolean('etat');
+            $table->timestamps();
+        });
+    }
 
-
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('eleves');
